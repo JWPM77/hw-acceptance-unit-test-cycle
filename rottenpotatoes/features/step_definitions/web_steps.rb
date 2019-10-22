@@ -86,6 +86,10 @@ When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
 
+When(/^I choose "([^"]*)" in "([^"]*)" date select$/) do |value, select_label|
+  select_date value, from: select_label
+end
+
 When /^(?:|I )check "([^"]*)"$/ do |field|
   check(field)
 end
